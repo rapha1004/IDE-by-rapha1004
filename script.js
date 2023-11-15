@@ -16,9 +16,9 @@ function reqbackup() {
 
 setInterval(() => {
     let CSSAdd = CSS.value
-    let write_css = "<style>"+ CSSAdd+"</style>"
+    let write_css = "<style>"+CSSAdd+"</style>"
     let HTMLAdd = HTML.value
-    divSite.innerHTML = (CSSAdd + HTMLAdd)
+    divSite.innerHTML = (write_css + HTMLAdd)
     localStorage.setItem('htmlBackup', HTMLAdd);
     localStorage.setItem('cssBackup', CSSAdd);
 }, 200);
